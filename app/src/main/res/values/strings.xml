@@ -1,0 +1,12 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">Betaseries</string>
+
+    <!-- Accueil -->
+    <string name="subtitle">La plus grosse communauté francophone de films et séries</string>
+    <string name="dev_name">Roxanne THOMAS</string>
+
+    <!-- Main -->
+    <string name="connexion">Se connecter</string>
+    <string name="inscription">S\'inscrire</string>
+</resources>

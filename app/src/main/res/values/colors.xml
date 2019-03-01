@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <!-- Main color declination -->
+
+    <!-- Lighter -->
+    <color name="declination1">#CBE1F3</color>
+    <color name="declination2">#BEDAF0</color>
+    <color name="declination3">#AED1EC</color>
+    <color name="declination4">#9AC5E7</color>
+    <color name="declination5">#81B6E1</color>
+    <color name="declination6">#62A4D9</color>
+
+    <!-- Main color -->
+    <color name="mainColor1">#3B8DD0</color>
+
+    <!-- Darker -->
+    <color name="declination7">#2F71A6</color>
+    <color name="declination8">#265A85</color>
+    <color name="declination9">#1E486A</color>
+    <color name="declination10">#183A55</color>
+    <color name="declination11">#132E44</color>
+    <color name="declination12">#0F2536</color>
+
+</resources>
