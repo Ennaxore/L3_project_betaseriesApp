@@ -1,7 +1,9 @@
 <resources>
     <!-- General -->
     <string name="app_name">Betaseries</string>
-
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <!-- Accueil -->
     <string name="subtitle">La plus grosse communauté francophone de films et séries</string>
     <string name="dev_name">Roxanne THOMAS</string>
@@ -9,4 +11,25 @@
     <!-- Main -->
     <string name="connexion">Se connecter</string>
     <string name="inscription">S\'inscrire</string>
+
+    <!-- Connexion -->
+    <string name="con_title">Connexion</string>
+    <string name="username">Identifiant</string>
+    <string name="password">Mot de passe</string>
+
+    <!-- Inscription -->
+    <string name="ins_title">Inscription</string>
+    <string name="ins_subtitle">Rejoignez les X XXX XXX passionés de séries</string>
+    <string name="ins_username">Pseudo</string>
+    <string name="ins_password">Mot de passe</string>
+    <string name="ins_confirm_password">Confirmez le mot de passe</string>
+    <string name="ins_mail_adress">E-mail</string>
+    <string name="ins_confirm_mail_adress">Confirmez votre e-mail</string>
+
+    <!-- Fiche série -->
+    <string name="serie_name">Nom de la série</string>
+    <string name="resume_episode_time">Durée moyenne d\'un épisode : </string>
+    <string name="resume_total_time">Durée totale de la série : </string>
+    <string name="resume_serie_statut">Statut : </string>
+    <string name="progress_text">Progression dans la série : </string>
 </resources>
