@@ -39,8 +39,7 @@
         android:textColor="@color/declination7"
         android:textSize="16sp"
         android:text="@string/connexion"
-        android:textStyle="bold"
-        android:onClick="toConnection"/>
+        android:textStyle="bold"/>
     <Button
         android:id="@+id/ins_button"
         android:layout_width="200dp"

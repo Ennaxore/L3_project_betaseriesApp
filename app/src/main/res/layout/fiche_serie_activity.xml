@@ -25,7 +25,7 @@
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/iv_logo"
             android:text="@string/serie_name"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
     </RelativeLayout>
@@ -38,7 +38,7 @@
         <ImageView
             android:id="@+id/iv_serie"
             android:layout_width="120dp"
-            android:layout_height="180dp"
+            android:layout_height="120dp"
             android:background="@color/mainColor1"/>
 
         <me.biubiubiu.justifytext.library.JustifyTextView
@@ -55,13 +55,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_serie_resume"
-            android:layout_toRightOf="@id/iv_serie"
             android:layout_marginLeft="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:text="@string/resume_episode_time"/>
+                android:text="@string/resume_episode_time"
+                android:textColor="@color/mainColor1"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,13 +73,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/resume_1"
-            android:layout_toRightOf="@id/iv_serie"
             android:layout_marginLeft="10dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:text="@string/resume_total_time"/>
+                android:text="@string/resume_total_time"
+                android:textColor="@color/mainColor1"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -89,14 +91,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/resume_2"
-            android:layout_toRightOf="@id/iv_serie"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="25dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
-                android:text="@string/resume_serie_statut"/>
+                android:text="@string/resume_serie_statut"
+                android:textColor="@color/mainColor1"
+                android:textStyle="bold"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -109,7 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_below="@id/resume_3"
-            android:text="@string/progress_text"/>
+            android:text="@string/progress_text"
+            android:textColor="@color/mainColor1"
+            android:textStyle="bold"/>
         <ProgressBar
             android:id="@+id/progress_horizontal"
             android:layout_width="match_parent"
