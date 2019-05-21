@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="15dp"
         android:inputType="text"
         android:background="@color/white"/>
 
@@ -76,8 +76,24 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/password"
+        android:layout_marginBottom="50dp"
         android:layout_centerHorizontal="true"
         android:inputType="textPassword"
         android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/go_to_search_button"
+        android:layout_below="@id/et_password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_radius_bg_d4"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="@string/con_title"
+        android:textStyle="bold"
+        android:onClick=""/>
 
 </RelativeLayout>

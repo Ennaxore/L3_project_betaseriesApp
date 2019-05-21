@@ -9,6 +9,7 @@ import android.widget.Button;
 public class ConnectionActivity extends AppCompatActivity {
 
     private Button goBackButton;
+    private Button goSearchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,11 +26,27 @@ public class ConnectionActivity extends AppCompatActivity {
                 goBack();
             }
         });
+
+        goSearchButton = findViewById(R.id.go_to_search_button);
+        goSearchButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                goSearchBase();
+            }
+        });
     }
 
     public void goBack()
     {
         Intent goBackActivity = new Intent(this, MainActivity.class);
         startActivity(goBackActivity);
+    }
+
+    public void goSearchBase()
+    {
+        Intent ficheSerieActivity = new Intent(this, FicheSerieActivity.class);
+        startActivity(ficheSerieActivity);
     }
 }
