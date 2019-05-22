@@ -47,6 +47,12 @@ public class FicheSerieActivity  extends AppCompatActivity
                 }
                 return genres;
             }
-        }
+
+            @Override
+            protected void onPostExecute(Genres genresCall)
+            {
+                tvTest.setText(genresCall.toString());
+            }
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 }
