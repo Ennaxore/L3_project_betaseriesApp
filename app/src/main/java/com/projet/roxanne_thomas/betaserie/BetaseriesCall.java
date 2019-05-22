@@ -10,4 +10,6 @@ public interface BetaseriesCall
             "X-BetaSeries-Version: 3.0",
             "X-BetaSeries-Key: dae7ecdb03b9"
     })
+    @GET("/shows/genres")
+    Call<Genres> showGender();
 }
