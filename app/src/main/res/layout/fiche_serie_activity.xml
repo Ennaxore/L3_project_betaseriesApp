@@ -128,10 +128,9 @@
             android:progressTint="@color/mainColor1"/>
         <TextView
             android:id="@+id/test"
-            android:layout_below="@id/progress_horizontal"
-            android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Texte par défaut"/>
+            android:layout_below="@id/progress_horizontal"
+            android:layout_marginTop="15dp"/>
     </RelativeLayout>
 </RelativeLayout>

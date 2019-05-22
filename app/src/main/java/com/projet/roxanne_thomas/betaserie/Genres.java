@@ -43,6 +43,10 @@ public class Genres
 
     @Override
     public String toString() {
-        return "Voici la liste des genres des séries répertoriées : " + genres;
+        return "Genres{" +
+                "genres=" + genres +
+                ", locale='" + locale + '\'' +
+                ", errors=" + errors +
+                '}';
     }
 }
