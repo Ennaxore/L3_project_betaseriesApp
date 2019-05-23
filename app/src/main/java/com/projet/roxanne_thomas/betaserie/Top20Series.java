@@ -34,4 +34,10 @@ public class Top20Series
     {
         this.errors = errors;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Séries populaires en ce moment : " + posters;
+    }
 }

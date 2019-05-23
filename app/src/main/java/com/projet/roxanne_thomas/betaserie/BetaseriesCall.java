@@ -12,4 +12,7 @@ public interface BetaseriesCall
     })
     @GET("/shows/genres")
     Call<Genres> showGender();
+
+    @GET("/shows/posters")
+    Call<Top20Series> showTop20();
 }

@@ -12,7 +12,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class FicheSerieActivity  extends AppCompatActivity
 {
     TextView tvTest;
+    TextView tvTop20;
+
     Genres genres;
+    Top20Series top20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,6 +25,9 @@ public class FicheSerieActivity  extends AppCompatActivity
 
         tvTest = findViewById(R.id.test);
         callWebservice();
+
+        tvTop20 = findViewById(R.id.top_serie);
+        callWSTop20();
     }
 
     public void callWebservice()
@@ -52,6 +58,37 @@ public class FicheSerieActivity  extends AppCompatActivity
             protected void onPostExecute(Genres genresCall)
             {
                 tvTest.setText(genresCall.toString());
+            }
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    }
+
+    public void callWSTop20()
+    {
+        new AsyncTask<Void,Void,Top20Series>()
+        {
+            @Override
+            protected Top20Series doInBackground(Void... voids)
+            {
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl("https://api.betaseries.com")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                BetaseriesCall service = retrofit.create(BetaseriesCall.class);
+                try
+                {
+                    top20 = service.showTop20().execute().body();
+                }
+                catch(IOException e)
+                {
+                    e.printStackTrace();
+                }
+                return top20;
+            }
+
+            @Override
+            protected void onPostExecute(Top20Series top20Call)
+            {
+                tvTop20.setText(top20Call.toString());
             }
         }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }

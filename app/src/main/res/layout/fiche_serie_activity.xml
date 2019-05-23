@@ -132,5 +132,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/progress_horizontal"
             android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/top_serie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/test"
+            android:layout_marginTop="15dp"/>
     </RelativeLayout>
 </RelativeLayout>

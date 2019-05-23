@@ -17,11 +17,12 @@ public class Genres
     @Expose
     private List<Object> errors = null;
 
-    public List<String> getGenres() {
+    public List<String> getGenres()
+    {
         return genres;
     }
-
-    public void setGenres(List<String> genres) {
+    public void setGenres(List<String> genres)
+    {
         this.genres = genres;
     }
 
