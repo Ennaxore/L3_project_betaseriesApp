@@ -1,5 +1,6 @@
 package com.projet.roxanne_thomas.betaserie;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,10 @@ public class FicheSerieActivity  extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fiche_serie_activity);
 
+        Intent i = getIntent();
+        String token = i.getStringExtra("token");
+
+
         tvTest = findViewById(R.id.test);
         callWebservice();
 
@@ -42,7 +47,7 @@ public class FicheSerieActivity  extends AppCompatActivity
                         .baseUrl("https://api.betaseries.com")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
-                BetaseriesCall service = retrofit.create(BetaseriesCall.class);
+                SerieCall service = retrofit.create(SerieCall.class);
                 try
                 {
                     genres = service.showGender().execute().body();
@@ -73,7 +78,7 @@ public class FicheSerieActivity  extends AppCompatActivity
                         .baseUrl("https://api.betaseries.com")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
-                BetaseriesCall service = retrofit.create(BetaseriesCall.class);
+                SerieCall service = retrofit.create(SerieCall.class);
                 try
                 {
                     top20 = service.showTop20().execute().body();

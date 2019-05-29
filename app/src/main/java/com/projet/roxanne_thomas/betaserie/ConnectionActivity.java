@@ -40,13 +40,14 @@ public class ConnectionActivity extends AppCompatActivity {
 
     public void goBack()
     {
-        Intent goBackActivity = new Intent(this, MainActivity.class);
-        startActivity(goBackActivity);
+        onBackPressed();
     }
 
     public void goSearchBase()
     {
         Intent ficheSerieActivity = new Intent(this, FicheSerieActivity.class);
+        Bundle b = new Bundle();
+        b.putString("token","ksdfjheakjvhnlkvjnalfekvjn");
         startActivity(ficheSerieActivity);
     }
 }
