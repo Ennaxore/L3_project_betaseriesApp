@@ -34,7 +34,6 @@ public class User
     public Boolean getArchived() {
         return archived;
     }
-
     public void setArchived(Boolean archived) {
         this.archived = archived;
     }
@@ -42,7 +41,6 @@ public class User
     public Boolean getFavorited() {
         return favorited;
     }
-
     public void setFavorited(Boolean favorited) {
         this.favorited = favorited;
     }
@@ -50,7 +48,6 @@ public class User
     public Integer getRemaining() {
         return remaining;
     }
-
     public void setRemaining(Integer remaining) {
         this.remaining = remaining;
     }
@@ -58,7 +55,6 @@ public class User
     public Integer getStatus() {
         return status;
     }
-
     public void setStatus(Integer status) {
         this.status = status;
     }
@@ -66,7 +62,6 @@ public class User
     public String getLast() {
         return last;
     }
-
     public void setLast(String last) {
         this.last = last;
     }
@@ -74,7 +69,6 @@ public class User
     public Object getTags() {
         return tags;
     }
-
     public void setTags(Object tags) {
         this.tags = tags;
     }
@@ -82,7 +76,6 @@ public class User
     public Next getNext() {
         return next;
     }
-
     public void setNext(Next next) {
         this.next = next;
     }
@@ -90,7 +83,6 @@ public class User
     public List<Object> getFriendsWatching() {
         return friendsWatching;
     }
-
     public void setFriendsWatching(List<Object> friendsWatching) {
         this.friendsWatching = friendsWatching;
     }

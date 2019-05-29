@@ -21,7 +21,6 @@ public class Images
     public String getShow() {
         return show;
     }
-
     public void setShow(String show) {
         this.show = show;
     }
@@ -29,7 +28,6 @@ public class Images
     public String getBanner() {
         return banner;
     }
-
     public void setBanner(String banner) {
         this.banner = banner;
     }
@@ -37,7 +35,6 @@ public class Images
     public String getBox() {
         return box;
     }
-
     public void setBox(String box) {
         this.box = box;
     }
@@ -45,7 +42,6 @@ public class Images
     public Object getPoster() {
         return poster;
     }
-
     public void setPoster(Object poster) {
         this.poster = poster;
     }

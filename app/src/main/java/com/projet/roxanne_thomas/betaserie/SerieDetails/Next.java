@@ -24,7 +24,6 @@ public class Next
     public Object getId() {
         return id;
     }
-
     public void setId(Object id) {
         this.id = id;
     }
@@ -32,7 +31,6 @@ public class Next
     public String getCode() {
         return code;
     }
-
     public void setCode(String code) {
         this.code = code;
     }
@@ -40,7 +38,6 @@ public class Next
     public Object getDate() {
         return date;
     }
-
     public void setDate(Object date) {
         this.date = date;
     }
@@ -48,7 +45,6 @@ public class Next
     public Object getTitle() {
         return title;
     }
-
     public void setTitle(Object title) {
         this.title = title;
     }
@@ -56,7 +52,6 @@ public class Next
     public Object getImage() {
         return image;
     }
-
     public void setImage(Object image) {
         this.image = image;
     }

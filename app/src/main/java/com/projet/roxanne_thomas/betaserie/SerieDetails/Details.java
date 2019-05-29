@@ -26,4 +26,10 @@ public class Details
     public void setErrors(List<Object> errors) {
         this.errors = errors;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Show : " + show + "\nErreurs : " + errors;
+    }
 }

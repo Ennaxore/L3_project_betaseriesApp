@@ -5,6 +5,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.projet.roxanne_thomas.betaserie.SerieDetails.Details;
+
 import java.io.IOException;
 
 import retrofit2.Retrofit;
@@ -14,9 +17,11 @@ public class FicheSerieActivity  extends AppCompatActivity
 {
     TextView tvTest;
     TextView tvTop20;
+    TextView tvDetails;
 
     Genres genres;
     Top20Series top20;
+    Details details;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,6 +38,9 @@ public class FicheSerieActivity  extends AppCompatActivity
 
         tvTop20 = findViewById(R.id.top_serie);
         callWSTop20();
+
+        tvDetails = findViewById(R.id.serie_details);
+        callWSSerieDetails();
     }
 
     public void callWebservice()
@@ -94,6 +102,37 @@ public class FicheSerieActivity  extends AppCompatActivity
             protected void onPostExecute(Top20Series top20Call)
             {
                 tvTop20.setText(top20Call.toString());
+            }
+        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+    }
+
+    public void callWSSerieDetails()
+    {
+        new AsyncTask<Void,Void, Details>()
+        {
+            @Override
+            protected Details doInBackground(Void... voids)
+            {
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl("https://api.betaseries.com")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                SerieCall service = retrofit.create(SerieCall.class);
+                try
+                {
+                    details = service.showDetails().execute().body();
+                }
+                catch(IOException e)
+                {
+                    e.printStackTrace();
+                }
+                return details;
+            }
+
+            @Override
+            protected void onPostExecute(Details detail)
+            {
+                tvDetails.setText(detail.toString());
             }
         }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }

@@ -27,6 +27,6 @@ public interface SerieCall
             "X-BetaSeries-Version: 3.0",
             "X-BetaSeries-Key: dae7ecdb03b9"
     })
-    @GET("/shows/display?id=123")
+    @GET("/shows/display?thetvdb_id=121361")
     Call<Details> showDetails();
 }

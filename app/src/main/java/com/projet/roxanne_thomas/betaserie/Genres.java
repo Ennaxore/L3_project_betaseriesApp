@@ -29,7 +29,6 @@ public class Genres
     public String getLocale() {
         return locale;
     }
-
     public void setLocale(String locale) {
         this.locale = locale;
     }
@@ -37,7 +36,6 @@ public class Genres
     public List<Object> getErrors() {
         return errors;
     }
-
     public void setErrors(List<Object> errors) {
         this.errors = errors;
     }

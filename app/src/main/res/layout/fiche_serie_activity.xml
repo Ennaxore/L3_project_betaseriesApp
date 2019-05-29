@@ -138,5 +138,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/test"
             android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/serie_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_serie"
+            android:layout_marginTop="15dp"/>
     </RelativeLayout>
 </RelativeLayout>
