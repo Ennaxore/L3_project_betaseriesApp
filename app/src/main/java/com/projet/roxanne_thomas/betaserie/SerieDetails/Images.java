@@ -6,17 +6,17 @@ import com.google.gson.annotations.SerializedName;
 public class Images
 {
     @SerializedName("show")
-    @Expose
+
     private String show;
     @SerializedName("banner")
-    @Expose
+
     private String banner;
     @SerializedName("box")
-    @Expose
+
     private String box;
     @SerializedName("poster")
-    @Expose
-    private Object poster;
+
+    private String poster;
 
     public String getShow() {
         return show;
@@ -39,10 +39,10 @@ public class Images
         this.box = box;
     }
 
-    public Object getPoster() {
+    public String getPoster() {
         return poster;
     }
-    public void setPoster(Object poster) {
+    public void setPoster(String poster) {
         this.poster = poster;
     }
 }

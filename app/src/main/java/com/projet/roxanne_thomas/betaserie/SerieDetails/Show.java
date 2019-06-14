@@ -8,88 +8,88 @@ import java.util.List;
 public class Show
 {
     @SerializedName("id")
-    @Expose
+
     private Integer id;
     @SerializedName("thetvdb_id")
-    @Expose
+
     private Integer thetvdbId;
     @SerializedName("imdb_id")
-    @Expose
+
     private String imdbId;
     @SerializedName("title")
-    @Expose
+
     private String title;
     @SerializedName("original_title")
-    @Expose
+
     private String originalTitle;
     @SerializedName("description")
-    @Expose
+
     private String description;
     @SerializedName("seasons")
-    @Expose
+
     private String seasons;
     @SerializedName("seasons_details")
-    @Expose
+
     private List<SeasonsDetail> seasonsDetails = null;
     @SerializedName("episodes")
-    @Expose
+
     private String episodes;
     @SerializedName("followers")
-    @Expose
+
     private String followers;
     @SerializedName("comments")
-    @Expose
+
     private String comments;
     @SerializedName("similars")
-    @Expose
+
     private String similars;
     @SerializedName("characters")
-    @Expose
+
     private String characters;
     @SerializedName("creation")
-    @Expose
+
     private String creation;
     @SerializedName("genres")
-    @Expose
+
     private List<String> genres = null;
     @SerializedName("length")
-    @Expose
+
     private String length;
     @SerializedName("network")
-    @Expose
+
     private String network;
     @SerializedName("rating")
-    @Expose
+
     private String rating;
     @SerializedName("status")
-    @Expose
+
     private String status;
     @SerializedName("language")
-    @Expose
+
     private String language;
     @SerializedName("notes")
-    @Expose
+
     private Notes notes;
     @SerializedName("in_account")
-    @Expose
+
     private Boolean inAccount;
     @SerializedName("images")
-    @Expose
+
     private Images images;
     @SerializedName("aliases")
-    @Expose
-    private List<Object> aliases = null;
+
+    private Aliases aliases = null;
     @SerializedName("social_links")
-    @Expose
+
     private List<Object> socialLinks = null;
     @SerializedName("user")
-    @Expose
+
     private User user;
     @SerializedName("next_trailer")
-    @Expose
+
     private Object nextTrailer;
     @SerializedName("resource_url")
-    @Expose
+
     private String resourceUrl;
 
     public Integer getId() {
@@ -253,10 +253,10 @@ public class Show
         this.images = images;
     }
 
-    public List<Object> getAliases() {
+    public Aliases getAliases() {
         return aliases;
     }
-    public void setAliases(List<Object> aliases) {
+    public void setAliases(Aliases aliases) {
         this.aliases = aliases;
     }
 
@@ -287,4 +287,39 @@ public class Show
     public void setResourceUrl(String resourceUrl) {
         this.resourceUrl = resourceUrl;
     }
+
+    @Override
+    public String toString() {
+        return "Show{" +
+                "id=" + id +
+                ", thetvdbId=" + thetvdbId +
+                ", imdbId='" + imdbId + '\'' +
+                ", title='" + title + '\'' +
+                ", originalTitle='" + originalTitle + '\'' +
+                ", description='" + description + '\'' +
+                ", seasons='" + seasons + '\'' +
+                ", seasonsDetails=" + seasonsDetails +
+                ", episodes='" + episodes + '\'' +
+                ", followers='" + followers + '\'' +
+                ", comments='" + comments + '\'' +
+                ", similars='" + similars + '\'' +
+                ", characters='" + characters + '\'' +
+                ", creation='" + creation + '\'' +
+                ", genres=" + genres +
+                ", length='" + length + '\'' +
+                ", network='" + network + '\'' +
+                ", rating='" + rating + '\'' +
+                ", status='" + status + '\'' +
+                ", language='" + language + '\'' +
+                ", notes=" + notes +
+                ", inAccount=" + inAccount +
+                ", images=" + images +
+                ", aliases=" + aliases +
+                ", socialLinks=" + socialLinks +
+                ", user=" + user +
+                ", nextTrailer=" + nextTrailer +
+                ", resourceUrl='" + resourceUrl + '\'' +
+                '}';
+    }
 }
+

@@ -6,13 +6,13 @@ import com.google.gson.annotations.SerializedName;
 public class Notes
 {
     @SerializedName("total")
-    @Expose
+
     private Integer total;
     @SerializedName("mean")
-    @Expose
+
     private Double mean;
     @SerializedName("user")
-    @Expose
+
     private Integer user;
 
     public Integer getTotal() {

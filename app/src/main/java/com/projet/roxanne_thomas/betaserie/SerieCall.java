@@ -5,6 +5,7 @@ import com.projet.roxanne_thomas.betaserie.SerieDetails.Details;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
+import retrofit2.http.Query;
 
 public interface SerieCall
 {
@@ -27,6 +28,7 @@ public interface SerieCall
             "X-BetaSeries-Version: 3.0",
             "X-BetaSeries-Key: dae7ecdb03b9"
     })
-    @GET("/shows/display?thetvdb_id=121361")
-    Call<Details> showDetails();
+    @GET("/shows/display")
+    Call<Details> showDetails(@Query("thetvdb_id") String paramId);
+
 }

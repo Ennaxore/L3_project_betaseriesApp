@@ -10,6 +10,9 @@ import com.projet.roxanne_thomas.betaserie.SerieDetails.Details;
 
 import java.io.IOException;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -18,10 +21,15 @@ public class FicheSerieActivity  extends AppCompatActivity
     TextView tvTest;
     TextView tvTop20;
     TextView tvDetails;
+    TextView tvSerieResume;
 
     Genres genres;
     Top20Series top20;
     Details details;
+    int t =0;
+
+    Retrofit retrofit;
+    SerieCall service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,17 +37,25 @@ public class FicheSerieActivity  extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fiche_serie_activity);
 
-        Intent i = getIntent();
-        String token = i.getStringExtra("token");
+        //Intent i = getIntent();
+        //String token = i.getStringExtra("token");
 
 
-        tvTest = findViewById(R.id.test);
+        /*tvTest = findViewById(R.id.test);
         callWebservice();
 
         tvTop20 = findViewById(R.id.top_serie);
-        callWSTop20();
+        callWSTop20();*/
 
         tvDetails = findViewById(R.id.serie_details);
+        tvSerieResume = findViewById(R.id.tv_serie_resume);
+         retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.betaseries.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+         service = retrofit.create(SerieCall.class);
+
+
         callWSSerieDetails();
     }
 
@@ -108,32 +124,19 @@ public class FicheSerieActivity  extends AppCompatActivity
 
     public void callWSSerieDetails()
     {
-        new AsyncTask<Void,Void, Details>()
-        {
+        service.showDetails("121361").enqueue(new Callback<Details>() {
             @Override
-            protected Details doInBackground(Void... voids)
-            {
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("https://api.betaseries.com")
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
-                SerieCall service = retrofit.create(SerieCall.class);
-                try
-                {
-                    details = service.showDetails().execute().body();
-                }
-                catch(IOException e)
-                {
-                    e.printStackTrace();
-                }
-                return details;
+            public void onResponse(Call<Details> call, Response<Details> response) {
+                tvDetails.setText(response.body().toString());
+                tvSerieResume.setText((response.body().getShow().getDescription()));
             }
 
             @Override
-            protected void onPostExecute(Details detail)
-            {
-                tvDetails.setText(detail.toString());
+            public void onFailure(Call<Details> call, Throwable t) {
+
             }
-        }.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        });
+
     }
+
 }

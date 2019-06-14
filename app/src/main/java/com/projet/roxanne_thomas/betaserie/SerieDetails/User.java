@@ -7,28 +7,28 @@ import com.google.gson.annotations.SerializedName;
 public class User
 {
     @SerializedName("archived")
-    @Expose
+
     private Boolean archived;
     @SerializedName("favorited")
-    @Expose
+
     private Boolean favorited;
     @SerializedName("remaining")
-    @Expose
+
     private Integer remaining;
     @SerializedName("status")
-    @Expose
+
     private Integer status;
     @SerializedName("last")
-    @Expose
+
     private String last;
     @SerializedName("tags")
-    @Expose
+
     private Object tags;
     @SerializedName("next")
-    @Expose
+
     private Next next;
     @SerializedName("friends_watching")
-    @Expose
+
     private List<Object> friendsWatching = null;
 
     public Boolean getArchived() {
