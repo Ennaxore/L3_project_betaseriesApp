@@ -18,6 +18,7 @@
             android:layout_centerVertical="true"
             android:src="@drawable/logo"/>
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -65,10 +66,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="@string/resume_episode_time"
+                    android:text="@string/season_number"
                     android:textColor="@color/mainColor1"
                     android:textStyle="bold"/>
                 <TextView
+                    android:id="@+id/tv_season_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Value"/>
@@ -83,10 +85,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="@string/resume_total_time"
+                    android:text="@string/episode_number"
                     android:textColor="@color/mainColor1"
                     android:textStyle="bold"/>
                 <TextView
+                    android:id="@+id/tv_episode_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Value"/>
@@ -106,6 +109,7 @@
                     android:textColor="@color/mainColor1"
                     android:textStyle="bold"/>
                 <TextView
+                    android:id="@+id/tv_statut"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Value"/>

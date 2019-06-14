@@ -28,8 +28,8 @@
 
     <!-- Fiche série -->
     <string name="serie_name">Nom de la série</string>
-    <string name="resume_episode_time">Durée moyenne d\'un épisode : </string>
-    <string name="resume_total_time">Durée totale de la série : </string>
+    <string name="season_number">Nombre de saisons : </string>
+    <string name="episode_number">Nombre d\'épisodes : </string>
     <string name="resume_serie_statut">Statut : </string>
     <string name="progress_text">Progression dans la série : </string>
 </resources>
