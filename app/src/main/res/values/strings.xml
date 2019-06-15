@@ -32,4 +32,7 @@
     <string name="episode_number">Nombre d\'épisodes : </string>
     <string name="resume_serie_statut">Statut : </string>
     <string name="progress_text">Progression dans la série : </string>
+
+    <!-- Mon compte -->
+    <string name="account_name">Mon compte</string>
 </resources>

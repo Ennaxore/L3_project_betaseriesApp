@@ -31,4 +31,11 @@ public interface SerieCall
     @GET("/shows/display")
     Call<Details> showDetails(@Query("thetvdb_id") String paramId);
 
+
+    /*@Headers({
+            "X-BetaSeries-Version: 3.0",
+            "X-BetaSeries-Key: dae7ecdb03b9"
+    })
+    @GET("/shows/posters")
+    Call<SearchActivity> popularSerie();*/
 }

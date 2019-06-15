@@ -5,11 +5,12 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Details
-{ @SerializedName("show")
-
+{
+    @SerializedName("show")
+    @Expose
     private Show show;
     @SerializedName("errors")
-
+    @Expose
     private List<Object> errors = null;
 
     public Show getShow() {
