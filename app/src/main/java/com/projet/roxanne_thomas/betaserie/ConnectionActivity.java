@@ -56,7 +56,7 @@ public class ConnectionActivity extends AppCompatActivity {
         service = retrofit.create(UserCall.class);
 
 
-        callWSAuthMember();
+        //callWSAuthMember();
     }
 
     public void goBack()

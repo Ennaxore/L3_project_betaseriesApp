@@ -34,5 +34,11 @@
     <string name="progress_text">Progression dans la série : </string>
 
     <!-- Mon compte -->
-    <string name="account_name">Mon compte</string>
+    <string name="account_name">Pseudo</string>
+    <string name="account">Mon compte</string>
+    <string name="title_activity_my_account">MyAccountActivity</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
