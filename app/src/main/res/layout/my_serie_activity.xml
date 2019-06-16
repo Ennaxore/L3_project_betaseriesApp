@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity">
+    tools:context=".MySerie">
 
     <!-- Header -->
     <RelativeLayout
@@ -27,18 +27,12 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/iv_logo"
-            android:text="@string/search_page"
+            android:text="@string/my_series"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/white"/>
     </RelativeLayout>
 
     <!-- Main content -->
-    <SearchView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header"
-        android:layout_marginTop="15dp"
-        android:layout_centerHorizontal="true">
-    </SearchView>
+
 </RelativeLayout>
