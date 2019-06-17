@@ -66,7 +66,7 @@ public class ConnectionActivity extends AppCompatActivity {
 
     public void goSearchBase()
     {
-        Intent ficheSerieActivity = new Intent(this, FicheSerieActivity.class);
+        Intent ficheSerieActivity = new Intent(this, SearchActivity.class);
         Bundle b = new Bundle();
         b.putString("token","ksdfjheakjvhnlkvjnalfekvjn");
         startActivity(ficheSerieActivity);

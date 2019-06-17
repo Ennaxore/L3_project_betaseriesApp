@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/mainColor1"/>
+
+    <LinearLayout
+        android:id="@+id/middleLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLine"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/mainColor1"/>
+        <ImageView
+            android:id="@+id/item1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_search"
+            android:onClick="goToSearch"
+            android:tint="@color/mainColor1"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/mainColor1"/>
+        <ImageView
+            android:id="@+id/item2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_series"
+            android:onClick="goToSeries"
+            android:tint="@color/mainColor1"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/mainColor1"/>
+        <ImageView
+            android:id="@+id/item3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_account"
+            android:onClick="goToAccount"
+            android:tint="@color/mainColor1"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/mainColor1"/>
+        <ImageView
+            android:id="@+id/item4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_settings"
+            android:tint="@color/mainColor1"/>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/mainColor1"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_below="@id/middleLine"
+        android:layout_height="3dp"
+        android:background="@color/mainColor1"/>
+</RelativeLayout>

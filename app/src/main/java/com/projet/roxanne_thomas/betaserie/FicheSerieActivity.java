@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ public class FicheSerieActivity extends AppCompatActivity {
     TextView tvSeason;
     TextView tvEpisode;
 
+
     Genres genres;
     Top20Series top20;
     Details details;
@@ -50,6 +52,7 @@ public class FicheSerieActivity extends AppCompatActivity {
 
         tvTop20 = findViewById(R.id.top_serie);
         callWSTop20();*/
+
 
         tvDetails = findViewById(R.id.serie_details);
         tvSerieResume = findViewById(R.id.tv_serie_resume);
@@ -150,5 +153,23 @@ public class FicheSerieActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void goToAccount(View v)
+    {
+        Intent intent = new Intent(this, Account.class);
+        startActivity(intent);
+    }
+
+    public void goToSearch(View v)
+    {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToSeries(View v)
+    {
+        Intent intent = new Intent(this, MySerie.class);
+        startActivity(intent);
     }
 }

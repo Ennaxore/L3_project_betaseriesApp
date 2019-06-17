@@ -30,12 +30,18 @@
             android:textStyle="bold"
             android:textColor="@color/white"/>
     </RelativeLayout>
-
+    <include
+        android:id="@+id/navbar"
+        layout="@layout/navbar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     <!-- Main content -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/header">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_above="@id/navbar">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -155,4 +161,5 @@
                 android:layout_marginTop="15dp"/>
         </RelativeLayout>
     </ScrollView>
+
 </RelativeLayout>
